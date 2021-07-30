@@ -1,0 +1,128 @@
+pkg_info {
+  arch: "v1model"
+}
+tables {
+  preamble {
+    id: 33588326
+    name: "MyIngress.mac_table_1"
+    alias: "mac_table_1"
+  }
+  match_fields {
+    id: 1
+    name: "1"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16818655
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+tables {
+  preamble {
+    id: 33597836
+    name: "MyIngress.mac_table_2"
+    alias: "mac_table_2"
+  }
+  match_fields {
+    id: 1
+    name: "1"
+    bitwidth: 8
+    match_type: EXACT
+  }
+  action_refs {
+    id: 16818655
+  }
+  action_refs {
+    id: 16800567
+    annotations: "@defaultonly"
+    scope: DEFAULT_ONLY
+  }
+  size: 1024
+}
+actions {
+  preamble {
+    id: 16800567
+    name: "NoAction"
+    alias: "NoAction"
+  }
+}
+actions {
+  preamble {
+    id: 16818655
+    name: "MyIngress.set_mac"
+    alias: "set_mac"
+  }
+  params {
+    id: 1
+    name: "nodeAddr"
+    bitwidth: 48
+  }
+}
+registers {
+  preamble {
+    id: 369157353
+    name: "register_port"
+    alias: "register_port"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 9
+      }
+    }
+  }
+  size: 1
+}
+registers {
+  preamble {
+    id: 369105087
+    name: "register_time"
+    alias: "register_time"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 1
+}
+registers {
+  preamble {
+    id: 369107857
+    name: "register_seq"
+    alias: "register_seq"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 64
+      }
+    }
+  }
+  size: 1
+}
+registers {
+  preamble {
+    id: 369161959
+    name: "register_ONOS"
+    alias: "register_ONOS"
+  }
+  type_spec {
+    bitstring {
+      bit {
+        bitwidth: 48
+      }
+    }
+  }
+  size: 1
+}
+type_info {
+}
